@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultsCard Component snapshot 1`] = `
+<article
+  className="bg-white rounded-lg p-4 pl-8 text-black max-h-full"
+>
+  <ol
+    className="space-y-2 list-decimal"
+  >
+    <li
+      className="leading-tight break-words correct-answer"
+    >
+      Unturned originally started as a Roblox game.
+    </li>
+    <li
+      className="leading-tight break-words wrong-answer"
+    >
+      The binary number "101001101" is equivalent to the Decimal number...
+    </li>
+    <li
+      className="leading-tight break-words correct-answer"
+    >
+      In "Portal 2", Cave Johnson started out Aperture Science as a...
+    </li>
+    <li
+      className="leading-tight break-words wrong-answer"
+    >
+      The fourth funnel of the RMS Titanic was fake designed to make the...
+    </li>
+    <li
+      className="leading-tight break-words correct-answer"
+    >
+      "Cube", "Cube 2: Hypercube" and "Cube Zero" were directed by the...
+    </li>
+    <li
+      className="leading-tight break-words wrong-answer"
+    >
+      Harry Potter was born on July 31st, 1980.
+    </li>
+    <li
+      className="leading-tight break-words correct-answer"
+    >
+      The weapon Clint Eastwood uses in "Dirty Harry" was a .44 Automag.
+    </li>
+    <li
+      className="leading-tight break-words wrong-answer"
+    >
+      Spoon theory is a theory, utilizing "Spoons" as a metaphor for...
+    </li>
+    <li
+      className="leading-tight break-words correct-answer"
+    >
+      In the "Kagerou Daze" series, Shintaro Kisaragi is prominently...
+    </li>
+    <li
+      className="leading-tight break-words wrong-answer"
+    >
+      The singer Billie Holiday was also known as "Lady Day".
+    </li>
+  </ol>
+</article>
+`;

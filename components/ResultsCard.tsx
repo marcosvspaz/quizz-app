@@ -12,6 +12,7 @@ const ResultsCard = ({ questions, answers }: ResultsCardProps) => {
         {questions.map((q, i) => {
           return (
             <li
+              key={q.question}
               className={cn(
                 'leading-tight break-words',
                 { [styles['wrong-answer']]: q.correct_answer !== answers[i] },

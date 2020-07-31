@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuestionCard Component snapshot 1`] = `
+<article
+  className="flex flex-col justify-evenly bg-white rounded-lg p-5 text-black text-center"
+>
+  <div
+    className="pb-8"
+  >
+    <small
+      className="text-gray-400 font-bold mb-3"
+    >
+      1/2
+    </small>
+    <br />
+    <small
+      className="text-gray-600 leading-tight"
+    >
+      Entertainment: Video Games
+    </small>
+    <h1
+      className="leading-tight font-semibold sm:text-3xl text-xl break-words"
+    >
+      Unturned originally started as a Roblox game.
+    </h1>
+  </div>
+  <div
+    className="h-full flex flex-col justify-between space-y-5"
+  >
+    <div>
+      <button
+        className="btn-quiz"
+        onClick={[Function]}
+      >
+        True
+      </button>
+    </div>
+    <div>
+      <button
+        className="btn-quiz"
+        onClick={[Function]}
+      >
+        False
+      </button>
+    </div>
+  </div>
+</article>
+`;
