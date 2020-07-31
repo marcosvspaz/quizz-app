@@ -1,4 +1,4 @@
-import unescape from 'lodash/unescape';
+import he from 'he';
 
 const QuestionCard = ({
   category,
@@ -11,8 +11,8 @@ const QuestionCard = ({
       <div className="pb-8">
         <small className="text-gray-400 font-bold mb-3">{questionIndicator}</small>
         <br />
-        <small className="text-gray-600">{category}</small>
-        <h1 className="leading-tight font-semibold sm:text-3xl text-xl">{unescape(question)}</h1>
+        <small className="text-gray-600 leading-tight">{category}</small>
+        <h1 className="leading-tight font-semibold sm:text-3xl text-xl">{he.decode(question)}</h1>
       </div>
       <div className="h-full flex flex-col justify-between space-y-5">
         <div>

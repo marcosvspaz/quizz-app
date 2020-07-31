@@ -1,5 +1,5 @@
 import truncate from 'lodash/truncate';
-import unescape from 'lodash/unescape';
+import he from 'he';
 import cn from 'classnames';
 import styles from './ResultsCard.module.scss';
 
@@ -18,7 +18,7 @@ const ResultsCard = ({ questions, answers }: ResultsCardProps) => {
                 { [styles['correct-answer']]: q.correct_answer === answers[i] }
               )}
             >
-              {truncateQuestion(unescape(q.question))}
+              {truncateQuestion(he.decode(q.question))}
             </li>
           );
         })}

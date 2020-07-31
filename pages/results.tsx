@@ -15,7 +15,7 @@ const Results = () => {
 
   return (
     <FullSizeAppLayout title="Results">
-      <FullConfetti />
+      <FullConfetti isOnce={true} />
       <div className="w-full min-h-screen px-10">
         <div className="h-full flex flex-col">
           <div className="py-3">

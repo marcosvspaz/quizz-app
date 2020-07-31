@@ -51,8 +51,6 @@ export async function getServerSideProps() {
     data: { results: questions },
   } = await axios.get(QUIZ_API_ENDPOINT);
 
-  console.log(questions);
-
   return {
     props: {
       initialStaticState: {
