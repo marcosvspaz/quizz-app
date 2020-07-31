@@ -5,7 +5,7 @@ const FullSizeAppLayout = ({ children, title = '10Q' }: FullSizeAppLayoutProps) 
     <header className="fixed top-0 h-14 w-full hidden">
       <h1 className="font-black text-center center py-3">{title}</h1>
     </header>
-    <main className="container mx-auto">{children}</main>
+    <main className="container mx-auto max-w-2xl">{children}</main>
     <footer className="hidden">Made by @diegod3v</footer>
   </>
 );

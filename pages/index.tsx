@@ -1,26 +1,15 @@
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import FullSizeAppLayout from './components/Layouts/FullSizeApp';
-import { useState, useEffect, useRef } from 'react';
+import FullConfetti from './components/FullConfetti';
 
 const Confetti = dynamic(() => import('react-confetti'));
 
 const Home = () => {
-  const [height, setHeight] = useState(0);
-  const [width, setWidth] = useState(0);
-  const containerRef = useRef();
-
-  useEffect(() => {
-    const containerEl = containerRef.current;
-    const { offsetWidth, offsetHeight } = containerEl as HTMLElement;
-    setWidth(offsetWidth);
-    setHeight(offsetHeight);
-  });
-
   return (
     <FullSizeAppLayout>
-      <Confetti width={width} height={height} />
-      <div className="w-full h-screen px-10" ref={containerRef}>
+      <FullConfetti />
+      <div className="w-full h-screen px-10">
         <div className="h-full flex flex-col justify-between">
           <div className="pt-16">
             <h1 className="awesome-text text-center font-black text-6xl">10Q</h1>
