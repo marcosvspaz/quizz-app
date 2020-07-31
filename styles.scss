@@ -1,0 +1,66 @@
+$color-primary: rgba(83, 17, 128, 1);
+$color-secondary: rgba(82, 77, 230, 1);
+$color-accent: rgb(255, 255, 255);
+$page-background: linear-gradient(0deg, $color-primary 0%, $color-secondary 100%);
+
+:root {
+  --color-primary: #{$color-primary};
+  --color-secondary: #{$color-secondary};
+  --color-accent: #{$color-accent};
+}
+
+@tailwind base;
+
+body {
+  text-align: left;
+  background: $page-background;
+  overflow-x: hidden;
+  color: #fff;
+}
+
+h1 {
+  @apply text-2xl;
+}
+h2 {
+  @apply text-xl;
+}
+h3 {
+  @apply text-lg;
+}
+a {
+  @apply text-blue-600 underline;
+}
+
+@tailwind components;
+
+.btn-quiz {
+  @apply flex rounded-full w-full text-center items-center px-4 py-2 text-black font-bold no-underline transition duration-300 transition-colors ease-out border-gray-400 border-2;
+  &:hover {
+    @apply text-white;
+    background-color: darken($color-secondary, 5%);
+  }
+  &:focus {
+    @apply outline-none;
+  }
+}
+
+.btn {
+  @apply flex rounded items-center uppercase px-4 py-2 text-black font-bold no-underline transition duration-300 transition-colors ease-out;
+}
+
+.btn-accent {
+  @apply bg-accent;
+  &:hover {
+    background-color: darken($color-accent, 5%);
+  }
+}
+
+.awesome-text {
+  color: #fff;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa,
+    0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3),
+    0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+@tailwind utilities;
