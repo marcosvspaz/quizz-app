@@ -13,7 +13,7 @@ const initialState: QuizState = {
   answers: [],
 };
 
-export const setQuestions = createAction('questions/set');
+export const setQuestions = createAction<any>('questions/set');
 export const pushAnswer = createAction<string>('answer/push');
 
 const reducer = createReducer<QuizState, any>(initialState, {

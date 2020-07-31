@@ -2,17 +2,16 @@ import axios from 'axios';
 import { useRouter } from 'next/router';
 import { useContext, useState } from 'react';
 import { QUIZ_API_ENDPOINT } from '../constants';
-import { pushAnswer, QuizContext } from '../contexts/quiz';
+import { pushAnswer, QuizContext, setQuestions } from '../contexts/quiz';
 import FullSizeAppLayout from '../components/Layouts/FullSizeApp';
 import QuestionCard from '../components/QuestionCard';
 import QuizTimer from '../components/QuizTimer';
 
-const Quiz = () => {
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+const Quiz = ({ questions }) => {
   const Router = useRouter();
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [state, dispatch] = useContext(QuizContext);
 
-  const { questions } = state;
   const currentQuestion = questions[currentQuestionIndex];
 
   const nextQuestion = (answer) => {
@@ -20,6 +19,7 @@ const Quiz = () => {
     if (currentQuestionIndex !== questions.length - 1) {
       setCurrentQuestionIndex((prev) => prev + 1);
     } else {
+      dispatch(setQuestions(questions));
       Router.push('/results');
     }
   };
@@ -55,9 +55,7 @@ export async function getServerSideProps() {
 
   return {
     props: {
-      initialStaticState: {
-        questions,
-      },
+      questions,
     },
   };
 }

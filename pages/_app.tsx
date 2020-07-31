@@ -5,7 +5,7 @@ import '../styles.scss';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <QuizContextProvider initialStaticState={pageProps.initialStaticState}>
+    <QuizContextProvider initialStaticState={{}}>
       <Head>
         <title key="title">10Q</title>
         <meta
