@@ -13,7 +13,7 @@ const ResultsCard = ({ questions, answers }: ResultsCardProps) => {
           return (
             <li
               className={cn(
-                'leading-tight',
+                'leading-tight break-words',
                 { [styles['wrong-answer']]: q.correct_answer !== answers[i] },
                 { [styles['correct-answer']]: q.correct_answer === answers[i] }
               )}
