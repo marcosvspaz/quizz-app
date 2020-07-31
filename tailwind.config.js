@@ -8,7 +8,6 @@ module.exports = {
       },
       height: {
         '14': '3.6rem',
-        'screen-layout': 'calc(100vh - 3.6rem)'
       },
       spacing: {
         '14': '3.6rem',
