@@ -3,9 +3,9 @@ import { useRouter } from 'next/router';
 import { useContext, useState } from 'react';
 import { QUIZ_API_ENDPOINT } from '../constants';
 import { pushAnswer, QuizContext } from '../contexts/quiz';
-import FullSizeAppLayout from './components/Layouts/FullSizeApp';
-import QuestionCard from './components/QuestionCard';
-import QuizTimer from './components/QuizTimer';
+import FullSizeAppLayout from '../components/Layouts/FullSizeApp';
+import QuestionCard from '../components/QuestionCard';
+import QuizTimer from '../components/QuizTimer';
 
 const Quiz = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -32,13 +32,15 @@ const Quiz = () => {
             <QuizTimer key={`timer-${currentQuestionIndex}`} onFinish={() => nextQuestion('')} />
           </div>
           <div className="py-14">
-            <QuestionCard
-              key={`question-${currentQuestionIndex}`}
-              category={currentQuestion.category}
-              question={currentQuestion.question}
-              questionIndicator={`${currentQuestionIndex + 1} / ${questions.length}`}
-              onSelectAnswer={(answer) => setTimeout(() => nextQuestion(answer), 200)}
-            />
+            {currentQuestion && (
+              <QuestionCard
+                key={`question-${currentQuestionIndex}`}
+                category={currentQuestion.category}
+                question={currentQuestion.question}
+                questionIndicator={`${currentQuestionIndex + 1} / ${questions.length}`}
+                onSelectAnswer={(answer) => setTimeout(() => nextQuestion(answer), 200)}
+              />
+            )}
           </div>
         </div>
       </div>

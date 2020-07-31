@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import FullSizeAppLayout from './components/Layouts/FullSizeApp';
-import FullConfetti from './components/FullConfetti';
+import FullSizeAppLayout from '../components/Layouts/FullSizeApp';
+import FullConfetti from '../components/FullConfetti';
 
 const Confetti = dynamic(() => import('react-confetti'));
 

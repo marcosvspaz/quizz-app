@@ -1,9 +1,9 @@
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { useEffect, useState, useContext } from 'react';
-import FullSizeAppLayout from './components/Layouts/FullSizeApp';
-import ResultsCard from './components/ResultsCard';
-import FullConfetti from './components/FullConfetti';
+import FullSizeAppLayout from '../components/Layouts/FullSizeApp';
+import ResultsCard from '../components/ResultsCard';
+import FullConfetti from '../components/FullConfetti';
 import { QuizContext } from '../contexts/quiz';
 
 const Results = () => {
@@ -11,7 +11,9 @@ const Results = () => {
   const { questions, answers } = state;
 
   const correctAnswersCount =
-    questions && questions.map((q, i) => q.correct_answer === answers[i]).filter(Boolean).length;
+    questions &&
+    answers &&
+    questions.map((q, i) => q.correct_answer === answers[i]).filter(Boolean).length;
 
   return (
     <FullSizeAppLayout title="Results">
@@ -22,7 +24,7 @@ const Results = () => {
             <p className="text-center font-bold text-xl">Score: {correctAnswersCount}/10</p>
           </div>
           <div className="py-3">
-            <ResultsCard questions={questions} answers={answers} />
+            {questions && answers && <ResultsCard questions={questions} answers={answers} />}
           </div>
           <div className="flex justify-center py-10">
             <Link href="/">
