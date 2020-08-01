@@ -1,0 +1,16 @@
+{
+  "name": "10Q Quiz App by Diegod3v",
+  "short_name": "10Q App",
+  "description": "Q10 (Quiz App) is a simple app of 10 random questions true/false to have fun",
+  "icons": [
+    {
+      "src": "/static/pwa.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#531180",
+  "background_color": "#531180",
+  "start_url": "/",
+  "display": "standalone"
+}

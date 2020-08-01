@@ -8,6 +8,8 @@ function MyApp({ Component, pageProps }) {
     <QuizContextProvider initialStaticState={{}}>
       <Head>
         <title key="title">10Q</title>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#531180" />
         <meta
           name="description"
           content="Play with your friends 10Q (ten questions) and have fun"
