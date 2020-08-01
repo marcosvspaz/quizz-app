@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title key="title">10Q</title>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#531180" />
+        <meta name="theme-color" content="#524de6" />
         <meta
           name="description"
           content="Play with your friends 10Q (ten questions) and have fun"
