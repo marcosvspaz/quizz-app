@@ -4,7 +4,7 @@ import useBoolean from 'react-use/lib/useBoolean';
 import cn from 'classnames';
 import { motion, useAnimation } from 'framer-motion';
 
-const QuizTimer = ({ defaultTimer = 10, dangerTime = 4, onFinish }: QuizTimerProps) => {
+const QuizTimer = ({ defaultTimer = 1000, dangerTime = 4, onFinish }: QuizTimerProps) => {
   const [time, setTime] = useState(defaultTimer);
   const [delay, setDelay] = useState(1000);
   const [isRunning, toggleIsRunning] = useBoolean(true);

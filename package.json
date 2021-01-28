@@ -50,5 +50,17 @@
     "react-test-renderer": "^16.13.1",
     "tailwindcss": "^1.6.0",
     "typescript": "^3.9.7"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "jest.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diego-d5000/quizz-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diego-d5000/quizz-app/issues"
+  },
+  "homepage": "https://github.com/diego-d5000/quizz-app#readme"
 }

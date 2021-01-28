@@ -12,7 +12,8 @@ const Home = () => {
       <div className="w-full h-screen px-10">
         <div className="h-full flex flex-col justify-between">
           <div className="pt-16">
-            <h1 className="awesome-text text-center font-black text-6xl">10Q</h1>
+            <h1 className="awesome-text text-center font-black text-6xl">Korean Now</h1>
+            <h2 className="awesome-text text-center font-black">Korean Now</h2>
           </div>
           <div className="font-bold text-lg text-center">
             <p className="mb-14">You will be presented with 10 questions</p>

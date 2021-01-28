@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <QuizContextProvider initialStaticState={{}}>
       <Head>
-        <title key="title">10Q</title>
+        <title key="title">Korean Now</title>
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#524de6" />
         <meta
